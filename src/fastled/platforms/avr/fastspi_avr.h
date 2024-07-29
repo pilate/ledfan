@@ -330,7 +330,7 @@ public:
 		FastPin<_DATA_PIN>::setOutput();
 
 		// Arduino Nano Every documentation lists SPI pins in ALT2 portmux position
-		PORTMUX_TWISPIROUTEA = PORTMUX_SPI01_bm;
+		// PORTMUX_TWISPIROUTEA = PORTMUX_SPI01_bm;
 
 		// Set SPI master mode and clock scaler.
 		SPI0_CTRLA = SPI_MASTER_bm;
