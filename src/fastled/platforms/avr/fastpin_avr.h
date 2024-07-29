@@ -52,7 +52,7 @@ typedef volatile uint8_t & reg8_t;
 #define _RD8(T) struct __gen_struct_ ## T { static inline reg8_t r() { return T; }};
 
 // Register name equivalent (using flat names)
-#if defined(AVR_ATtinyxy7) || defined(AVR_ATtinyxy6) || defined(AVR_ATtinyxy4) || defined(AVR_ATtinyxy2)
+#if defined(AVR_ATtinyxy7) || defined(AVR_ATtinyxy6) || defined(AVR_ATtinyxy4) || defined(AVR_ATtinyxy2) || defined(__AVR_ATtinyxy6__)
 
 // ATtiny series 0/1 and ATmega series 0
 #define _FL_IO(L,C) _RD8(PORT ## L ## _DIR); _RD8(PORT ## L ## _OUT); _RD8(PORT ## L ## _IN); _FL_DEFINE_PORT3(L, C, _R(PORT ## L ## _OUT));
