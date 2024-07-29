@@ -195,6 +195,20 @@ _FL_DEFPIN(12, 4, B); _FL_DEFPIN(13, 5, B); _FL_DEFPIN(14, 6, B); _FL_DEFPIN(15,
 #define AVR_HARDWARE_SPI 1
 
 #define HAS_HARDWARE_PIN_SUPPORT 1
+#elif defined(__AVR_ATtiny416__) || defined(__AVR_ATtiny816__) || defined(__AVR_ATtiny1616__) || defined(__AVR_ATtiny3216__)
+
+#define MAX_PIN 20
+_FL_DEFPIN(0, 4, A); _FL_DEFPIN(1, 5, A); _FL_DEFPIN(2, 6, A); _FL_DEFPIN(3, 7, A);
+_FL_DEFPIN(4, 5, B); _FL_DEFPIN(5, 4, B); _FL_DEFPIN(6, 3, B); _FL_DEFPIN(7, 2, B);
+_FL_DEFPIN(8, 1, B); _FL_DEFPIN(9, 0, B); _FL_DEFPIN(10, 0, C); _FL_DEFPIN(11, 1, C);
+_FL_DEFPIN(12, 2, C); _FL_DEFPIN(13, 3, C); _FL_DEFPIN(17, 0, A); _FL_DEFPIN(14, 1, A);
+_FL_DEFPIN(15, 2, A); _FL_DEFPIN(16, 3, A);
+
+#define SPI_DATA 14
+#define SPI_CLOCK 16
+#define AVR_HARDWARE_SPI 1
+
+#define HAS_HARDWARE_PIN_SUPPORT 1
 #elif defined(ARDUINO_HOODLOADER2) && (defined(__AVR_ATmega32U2__) || defined(__AVR_ATmega16U2__) || defined(__AVR_ATmega8U2__)) || defined(__AVR_AT90USB82__) || defined(__AVR_AT90USB162__)
 
 #define MAX_PIN 20
