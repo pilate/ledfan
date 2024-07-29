@@ -1,10 +1,8 @@
 
 #include <SPI.h>
-#include "lib/fastled/FastLED.h"
+#include "src/fastled/FastLED.h"
 #include "pisk68xx.h"
 #include "pisleep.h"
-
-#include <tinyNeoPixel.h>
 
 #define NUM_LEDS 5
 #define TOTAL_LEDS 10
@@ -19,9 +17,6 @@ CRGB STRIP3[TOTAL_LEDS];
 
 uint8_t dynamic_data[NUM_LEDS * 3];
 uint8_t dynamic_data2[NUM_LEDS * 3];
-
-tinyNeoPixel leds = tinyNeoPixel(5, PIN_PB0, NEO_GRB);
-tinyNeoPixel leds2 = tinyNeoPixel(5, PIN_PB1, NEO_GRB);
 
 // SK6803MINI-E is GRB not RGB
 uint8_t RGB_ORDER[] = { 1, 0, 2 };
